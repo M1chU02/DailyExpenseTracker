@@ -1,0 +1,7 @@
+<%- include('layout', { user: user }); %>
+<h2>Welcome to Daily Expense Tracker</h2>
+<% if (!user) { %>
+<p>Please <a href="/auth/login">login</a> to manage your expenses.</p>
+<% } else { %>
+<p>Hello, <%= user.name %>! <a href="/expenses">View your expenses</a>.</p>
+<% } %>
